@@ -16,13 +16,30 @@ def build_heap(data):
     return swaps
 
 def main():
-    n = input()
-    data = list(map(int, input().split()))
-    assert len(data) == n
-    swaps = build_heap(data)
-    print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+    text = input()
+    if "I" in text:
+        n = int(input())
+        data = list(map(int, input().split()))
+        assert len(data) == n
+        swaps = build_heap(data)
+        print(len(swaps))
+        for i, j in swaps:
+            print(i, j)
+    if "F" in text:
+        filename = input()
+        filename = "test/" + filename
+        if 'a' not in filename:
+            try:
+                with open(filename, "r") as file:
+                    n = int(input())
+                    data = list(map(int, input().split()))
+                    assert len(data) == n
+                    swaps = build_heap(data)
+                    print(len(swaps))
+                    for i, j in swaps:
+                        print(i, j)
+            except:
+                return "File not found"
 
 if __name__ == "__main__":
     main()
