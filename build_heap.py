@@ -1,3 +1,5 @@
+# Matiss Laksevics, IT, DITF, 4.grupa, 221RDB363
+
 def sift_down(data, i, swaps):
     lc = 2 * i + 1
     if lc < len(data):
@@ -27,7 +29,7 @@ def main():
             print(i, j)
     if "F" in text:
         filename = input()
-        filename = "test/" + filename
+        filename = "tests/" + filename
         if 'a' not in filename:
             try:
                 with open(filename, "r") as file:
