@@ -33,7 +33,7 @@ def main():
         if 'a' not in filename:
             try:
                 with open(filename, "r") as file:
-                    n = int(input())
+                    n = int(file.readline())
                     data = list(map(int, file.readline().split()))
                     assert len(data) == n
                     swaps = build_heap(data)
